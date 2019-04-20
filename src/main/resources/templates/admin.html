@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tech Radar</title>
+</head>
+<body>
+ <h1>Admin area</h1>
+   <p>This is the place to define new tech cards or edit the existing ones.</p>
+   <div th:if="${repository}">
+     <p> The project repository is: <i><span th:text="${repository.getUri()}">Project repository</span></i></p>
+   </div>
+   <div th:if="${principal}">
+      <p> In case you forgot, your user name is: <i><span th:text="${principal.getName()}">Current User</span></i></p>
+   </div>
+   <a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tech Radar</title>
+</head>
+<body>
+	<h1>Tech Cards</h1>
+
+    <h3>Keycloak</h3>
+    <p>Keycloak is an open source Identity and Access Management solution.</p>
+	<p>This project provides you a starting point and uses: Keycloak 3.4.3 and Spring Boot 2.1.4. Please enjoy!</p>
+	<ul>
+		<li>Keycloak</li>
+		<li>OpenId Connect and OAuth 2.0</li>
+		<li>Spring Security 5</li>
+		<li>Spring Boot 2</li>
+	</ul>
+
+	<div th:if="${principal}">
+        <p> In case you forgot, your user name is: <i><span th:text="${principal.getName()}">Current User</span></i></p>
+	</div>
+	<a href="/">Home</a>
+</body>
+</html>

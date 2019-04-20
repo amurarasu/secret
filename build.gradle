@@ -1,0 +1,30 @@
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+}
+
+group = 'com.techradar'
+version = '0.0.1'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'idea'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-thymeleaf",
+            "org.springframework.boot:spring-boot-starter-security",
+            "org.springframework.boot:spring-boot-starter-oauth2-client",
+            "org.springframework:spring-webflux",
+            "io.projectreactor.netty:reactor-netty",
+			"org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.4.RELEASE"
+}
+

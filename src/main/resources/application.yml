@@ -1,0 +1,29 @@
+server:
+  port: 9001
+
+kc:
+  base-url: http://localhost:8080/auth
+  realm: techradar
+  realm-url: ${kc.base-url}/realms/${kc.realm}
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          techradar:
+            provider: keycloak
+            client-id: ui-techradar
+            client-name: TechRadar UI
+            client-secret: b193d63e-efb3-4f22-a992-b4f93f02ad97
+            authorization-grant-type: authorization_code
+            scope: openid, profile, read
+            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          keycloak:
+            authorization-uri: ${kc.realm-url}/protocol/openid-connect/auth
+            jwk-set-uri: ${kc.realm-url}/protocol/openid-connect/certs
+            token-uri: ${kc.realm-url}/protocol/openid-connect/token
+            user-info-uri: ${kc.realm-url}/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+
