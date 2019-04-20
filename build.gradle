@@ -23,8 +23,6 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-thymeleaf",
             "org.springframework.boot:spring-boot-starter-security",
             "org.springframework.boot:spring-boot-starter-oauth2-client",
-            "org.springframework:spring-webflux",
-            "io.projectreactor.netty:reactor-netty",
 			"org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.4.RELEASE"
 }
 

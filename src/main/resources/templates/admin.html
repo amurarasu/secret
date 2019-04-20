@@ -7,9 +7,6 @@
 <body>
  <h1>Admin area</h1>
    <p>This is the place to define new tech cards or edit the existing ones.</p>
-   <div th:if="${repository}">
-     <p> The project repository is: <i><span th:text="${repository.getUri()}">Project repository</span></i></p>
-   </div>
    <div th:if="${principal}">
       <p> In case you forgot, your user name is: <i><span th:text="${principal.getName()}">Current User</span></i></p>
    </div>
