@@ -15,7 +15,7 @@ spring:
             provider: keycloak
             client-id: ui-techradar
             client-name: TechRadar UI
-            client-secret: b193d63e-efb3-4f22-a992-b4f93f02ad97
+            client-secret: eac397be-31d8-4f7c-a5e7-5beca32ee747
             authorization-grant-type: authorization_code
             scope: openid, profile
             redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
